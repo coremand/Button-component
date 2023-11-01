@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Button from './Button';
+import { GoBell } from "react-icons/go"
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div>
+            <Button primary>
+                <GoBell />
+                Buy Now!
+            </Button>
+        </div>
+        <div>
+            <Button>Search</Button>
+        </div>
+        <div>
+            <Button outline primary>Login</Button>
+        </div>
+        <div>
+            <Button outline secondary>Checkout</Button>
+        </div>
+        <div>
+            <Button danger>Danger</Button>
+        </div>
     </div>
-  );
+  )
 }
-
-export default App;
